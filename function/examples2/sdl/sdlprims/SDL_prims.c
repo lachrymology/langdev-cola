@@ -15,7 +15,7 @@
  * 
  * THE SOFTWARE IS PROVIDED 'AS IS'.  USE ENTIRELY AT YOUR OWN RISK.
  * 
- * Last edited: 2008-06-13 10:35:40 by piumarta on emilia
+ * Last edited: 2010-03-11 08:44:32 by piumarta on margaux1
  */
 
 #include <stdio.h>
@@ -80,7 +80,7 @@ int SDL_DrawPixel(SDL_Surface *s, int x, int y, Uint32 c)
 	case 2: return DrawPixel16(s, x, y, c);
 	case 3:
 #	        if (SDL_BYTEORDER == SDL_BIG_ENDIAN)
-	        colour <<= 8;
+	        c <<= 8;
 #	        endif
 	case 4: return DrawPixel32(s, x, y, c);
 	}
